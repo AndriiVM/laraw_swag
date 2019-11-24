@@ -1,20 +1,22 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "API Laravel VueJS",
+        "title": "API Laravel 6.5",
+        "description": "This is a sample server for ...",
+        "contact": {
+            "name": "API Support",
+            "url": "http://www.swagger.io/support",
+            "email": "support@swagger.io"
+        },
         "version": "0.1"
     },
+    "servers": [
+        {
+            "url": "http://127.0.0.1:8000/api/v1"
+        }
+    ],
     "paths": {
-        "/companies": {
-            "get": {
-                "responses": {
-                    "200": {
-                        "description": "An example resource"
-                    }
-                }
-            }
-        },
-        "/api/greet": {
+        "/greet": {
             "get": {
                 "tags": [
                     "greeting1"
@@ -29,12 +31,13 @@
                 }
             }
         },
-        "/v1/login": {
+        "/login": {
             "post": {
                 "tags": [
                     "Login1"
                 ],
                 "summary": "Login",
+                "description": "A sample ... to test out the API",
                 "operationId": "login",
                 "parameters": [
                     {
@@ -80,12 +83,13 @@
                 }
             }
         },
-        "/api/v1/companies": {
+        "/companies": {
             "get": {
                 "tags": [
                     "Companies"
                 ],
                 "summary": "List of all companies.",
+                "description": "A sample ... to test out the API",
                 "operationId": "index",
                 "responses": {
                     "200": {
@@ -110,6 +114,7 @@
                     "Companies"
                 ],
                 "summary": "Create a company.",
+                "description": "A sample ... to test out the API",
                 "operationId": "store",
                 "requestBody": {
                     "content": {
@@ -175,13 +180,13 @@
                 }
             }
         },
-        "/api/v1/companies/{id}": {
+        "/companies/{id}": {
             "get": {
                 "tags": [
                     "Companies"
                 ],
                 "summary": "Get company information",
-                "description": "Returns company data",
+                "description": "A sample ... to test out the API",
                 "operationId": "show",
                 "parameters": [
                     {
@@ -268,15 +273,6 @@
                         "description": "An example resource PostsController"
                     }
                 }
-            }
-        }
-    },
-    "components": {
-        "securitySchemes": {
-            "bearerAuth": {
-                "type": "http",
-                "bearerFormat": "JWT",
-                "scheme": "bearer"
             }
         }
     }
