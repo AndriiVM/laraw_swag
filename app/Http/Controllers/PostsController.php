@@ -4,12 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-/**
- * @OA\Get(
- *     path="/posts",
- *     @OA\Response(response="200", description="An example resource PostsController")
- * )
- */
 class PostsController extends Controller
 {
     /**

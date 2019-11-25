@@ -9,24 +9,9 @@ use Illuminate\Http\Request;
 
 class CompaniesController extends Controller
 {
-
-    /**
-     * @OA\GET(
-     *     path="/greet",
-     *     tags={"greeting1"},
-     *     summary="Returns a Sample API response",
-     *     description="A sample greeting to test out the API",
-     *     operationId="sampleFunctionWithDoc",
-     *     @OA\Response(
-     *         response="default",
-     *         description="successful operation"
-     *     )
-     * )
-     */
-
     /**
       @OA\Post(
-          path="/login",
+          path="/api/v1/login",
           tags={"Login1"},
           summary="Login",
           description="A sample ... to test out the API",
@@ -77,7 +62,7 @@ class CompaniesController extends Controller
 
     /**
      * @OA\Get(
-     *      path="/companies",
+     *      path="/api/v1/companies",
      *      tags={"Companies"},
      *      summary="List of all companies.",
             description="A sample ... to test out the API",
@@ -122,7 +107,7 @@ class CompaniesController extends Controller
 
     /**
      * @OA\Post(
-     *      path="/companies",
+     *      path="/api/v1/companies",
      *      tags={"Companies"},
      *      summary="Create a company.",
             description="A sample ... to test out the API",
@@ -198,7 +183,7 @@ class CompaniesController extends Controller
 
     /**
      * @OA\Get(
-     *      path="/companies/{id}",
+     *      path="/api/v1/companies/{id}",
      *      operationId="show",
      *      tags={"Companies"},
      *      summary="Get company information",
@@ -292,6 +277,88 @@ class CompaniesController extends Controller
     }
 
     /**
+     * @OA\Patch(
+     *      path="/api/v1/companies/{company}",
+     *      tags={"Companies"},
+     *      summary="Update a company.",
+            description="A sample ... to test out the API",
+     *      operationId="update",
+     *      @OA\Parameter(
+     *          name="company",
+     *          description="Company id",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\RequestBody(
+     *         @OA\MediaType(
+     *             mediaType="application/json",
+     *             @OA\Schema(
+     *                 @OA\Property(
+     *                     property="company",
+     *                     type="string"
+     *                 ),
+     *                 example={"name": "Jessica Smith"}
+     *             )
+     *         )
+     *      ),
+     *
+     *      @OA\Response(
+     *          response=200,
+     *          description="Success a company update.",
+     *          @OA\MediaType(
+     *              mediaType="application/json",
+     *              @OA\Schema(
+     *                  @OA\Property(
+     *                      property="name",
+     *                      type="string",
+     *                      description="Company name."
+     *                  ),
+     *                  @OA\Property(
+     *                      property="updated_at",
+     *                      type="string",
+     *                      description="Date of update."
+     *                  ),
+     *                  @OA\Property(
+     *                      property="created_at",
+     *                      type="string",
+     *                      description="Date of create.",
+     *                  ),
+     *                  @OA\Property(
+     *                      property="Id",
+     *                      type="integer",
+     *                      description="Record ID.",
+     *                  ),
+     *                  example={
+                            "name": "Jessica Smith",
+                            "updated_at": "2019-11-21 16:41:42",
+                            "created_at": "2019-11-21 16:41:42",
+                            "id": 7
+                        }
+     *              )
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Unauthorized"
+     *      ),
+     *      @OA\Response(
+     *          response=400,
+     *          description="Invalid ID supplied"
+     *      ),
+     *      @OA\Response(
+     *          response=404,
+     *          description="Company not found"
+     *      ),
+     *     @OA\Response(
+     *         response=405,
+     *         description="Validation exception"
+     *     ),
+     * )
+     */
+    /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -306,6 +373,41 @@ class CompaniesController extends Controller
         return $company;
     }
 
+    /**
+     * @OA\Delete(
+     *     path="/api/v1/companies/{company}",
+     *     tags={"Companies"},
+     *     description="deletes a single company based on the ID supplied",
+     *     operationId="destroy",
+     *     @OA\Parameter(
+     *         description="ID of company to delete",
+     *         in="path",
+     *         name="company",
+     *         required=true,
+     *         @OA\Schema(
+     *             format="int64",
+     *             type="integer"
+     *         )
+     *     ),
+     *     @OA\Response(
+     *         response=404,
+     *         description="Company not found"
+     *     ),
+     *     @OA\Response(
+     *         response=204,
+     *         description="company deleted"
+     *     ),
+     *     @OA\Response(
+     * 		   response=200,
+     * 	       description="success",
+     * 	   ),
+     *     @OA\Response(
+     *         response="default",
+     *         description="unexpected error",
+     *         @OA\Schema(ref="#/components/schemas/ErrorModel")
+     *     )
+     * )
+     */
     /**
      * Remove the specified resource from storage.
      *

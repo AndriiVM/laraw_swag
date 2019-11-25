@@ -17,7 +17,7 @@ use Illuminate\Routing\Controller as BaseController;
  *         email="support@swagger.io"
  *     )
  * ),
- * @OA\Server(url="http://127.0.0.1:8000/api/v1")
+ * @OA\Server(url="http://127.0.0.1:8000/")
  */
 class Controller extends BaseController
 {
