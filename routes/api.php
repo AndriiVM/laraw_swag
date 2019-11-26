@@ -13,8 +13,12 @@ use App\Http\Controllers\GameController;
 |
 */
 
+/*
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
+});*/
+Route::middleware('auth:api')->group( function(){
+
 });
 Route::group(['prefix' => '/v1', 'namespace' => 'Api\V1', 'as' => 'api.'], function () {
     Route::resource('companies', 'CompaniesController', ['except' => ['create', 'edit']]);
