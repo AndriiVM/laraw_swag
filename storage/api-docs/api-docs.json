@@ -256,6 +256,7 @@
                 "tags": [
                     "Companies"
                 ],
+                "summary": "delete a company.",
                 "description": "deletes a single company based on the ID supplied",
                 "operationId": "destroy",
                 "parameters": [

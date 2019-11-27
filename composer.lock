@@ -4,8 +4,89 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "57e527aa6876b932014487e5593aaead",
+    "content-hash": "1374744abbfdd3877d35c0835a4a2724",
     "packages": [
+        {
+            "name": "byjg/swagger-test",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/byjg/php-swagger-test.git",
+                "reference": "5bdc475f028719d5377907cbcf7fc7e61d76f470"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/byjg/php-swagger-test/zipball/5bdc475f028719d5377907cbcf7fc7e61d76f470",
+                "reference": "5bdc475f028719d5377907cbcf7fc7e61d76f470",
+                "shasum": ""
+            },
+            "require": {
+                "byjg/uri": "1.0.*",
+                "guzzlehttp/guzzle": "6.*",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.7.*|7.4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ByJG\\Swagger\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "João Gilberto Magalhães",
+                    "email": "joao@byjg.com.br"
+                }
+            ],
+            "description": "A set of tools for test your REST calls based on the swagger documentation using PHPUnit",
+            "time": "2019-10-21T14:17:53+00:00"
+        },
+        {
+            "name": "byjg/uri",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/byjg/uri.git",
+                "reference": "d252f70ca1f866e3c1c33d56c284c1d9da481959"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/byjg/uri/zipball/d252f70ca1f866e3c1c33d56c284c1d9da481959",
+                "reference": "d252f70ca1f866e3c1c33d56c284c1d9da481959",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "psr/http-message": "~1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": ">5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ByJG\\Util\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "João Gilberto Magalhães",
+                    "email": "joao@byjg.com.br"
+                }
+            ],
+            "description": "An implementation of PSR UriInterface ",
+            "time": "2018-03-09T01:56:58+00:00"
+        },
         {
             "name": "darkaonline/l5-swagger",
             "version": "6.0.3",
