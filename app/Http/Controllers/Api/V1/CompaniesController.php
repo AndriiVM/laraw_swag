@@ -377,6 +377,7 @@ class CompaniesController extends Controller
      * @OA\Delete(
      *     path="/api/v1/companies/{company}",
      *     tags={"Companies"},
+     *     summary="deletes a company.",
      *     description="deletes a single company based on the ID supplied",
      *     operationId="destroy",
      *     @OA\Parameter(
