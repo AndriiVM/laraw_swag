@@ -18,7 +18,7 @@ class MyCaseTest extends \ByJG\Swagger\SwaggerTestCase
         $request = new \ByJG\Swagger\SwaggerRequester();
         $request
             ->withMethod('GET')
-            ->withPath("/path/for/get/1");
+            ->withPath("/api/v1/companies/5");
 
         $this->assertRequest($request);
     }
@@ -26,7 +26,7 @@ class MyCaseTest extends \ByJG\Swagger\SwaggerTestCase
     /**
      * Test if the REST address /path/for/get/NOTFOUND returns a status code 404.
      */
-    public function testGetNotFound()
+   /* public function testGetNotFound()
     {
         $request = new \ByJG\Swagger\SwaggerRequester();
         $request
@@ -41,7 +41,7 @@ class MyCaseTest extends \ByJG\Swagger\SwaggerTestCase
      * Test if the REST address /path/for/post/ID with the method POST
      * and the request object ['name'=>'new name', 'field' => 'value'] will return an object
      * as is documented in the "swagger.json" file
-     */
+     *//*
     public function testPost()
     {
         $request = new \ByJG\Swagger\SwaggerRequester();
@@ -57,7 +57,7 @@ class MyCaseTest extends \ByJG\Swagger\SwaggerTestCase
      * Test if the REST address /another/path/for/post/{id} with the method POST
      * and the request object ['name'=>'new name', 'field' => 'value'] will return an object
      * as is documented in the "swagger.json" file
-     */
+     *//*
     public function testPost2()
     {
         $request = new \ByJG\Swagger\SwaggerRequester();
@@ -68,6 +68,6 @@ class MyCaseTest extends \ByJG\Swagger\SwaggerTestCase
             ->withRequestBody(['name'=>'new name', 'field' => 'value']);
 
         $this->assertRequest($request);
-    }
+    }*/
 
 }

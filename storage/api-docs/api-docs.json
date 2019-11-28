@@ -12,7 +12,7 @@
     },
     "servers": [
         {
-            "url": "http://127.0.0.1:8000/"
+            "url": "http://127.0.0.1:8000"
         }
     ],
     "paths": {
@@ -256,7 +256,7 @@
                 "tags": [
                     "Companies"
                 ],
-                "summary": "delete a company.",
+                "summary": "deletes a company.",
                 "description": "deletes a single company based on the ID supplied",
                 "operationId": "destroy",
                 "parameters": [
