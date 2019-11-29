@@ -12,7 +12,17 @@
     },
     "servers": [
         {
-            "url": "http://127.0.0.1:8000"
+            "url": "{schema}://127.0.0.1:8000",
+            "description": "OpenApi parameters",
+            "variables": {
+                "schema": {
+                    "enum": [
+                        "https",
+                        "http"
+                    ],
+                    "default": "http"
+                }
+            }
         }
     ],
     "paths": {
@@ -197,7 +207,7 @@
                                         },
                                         "name": {
                                             "description": "Company name.",
-                                            "type": "string|null"
+                                            "type": "string"
                                         },
                                         "address": {
                                             "description": "Address.",

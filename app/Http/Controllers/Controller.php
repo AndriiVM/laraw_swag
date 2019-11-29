@@ -7,6 +7,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
 /**
+ *
  * @OA\Info(
  *     title="API Laravel 6.5",
  *     version="0.1",
@@ -17,7 +18,15 @@ use Illuminate\Routing\Controller as BaseController;
  *         email="support@swagger.io"
  *     ),
  * ),
- * @OA\Server(url="http://127.0.0.1:8000")
+ *  @OA\Server(
+ *      url="{schema}://127.0.0.1:8000",
+ *      description="OpenApi parameters",
+ *      @OA\ServerVariable(
+ *          serverVariable="schema",
+ *          enum={"https", "http"},
+ *          default="http"
+ *      )
+ * )
  */
 class Controller extends BaseController
 {

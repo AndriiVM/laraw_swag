@@ -210,7 +210,7 @@ class CompaniesController extends Controller
                           ),
                           @OA\Property(
                               property="name",
-                              type="string|null",
+                              type="string",
                               description="Company name."
                           ),
                           @OA\Property(
