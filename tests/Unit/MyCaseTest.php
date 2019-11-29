@@ -15,6 +15,7 @@ class MyCaseTest extends \ByJG\Swagger\SwaggerTestCase
      */
     public function testGet()
     {
+
         $request = new \ByJG\Swagger\SwaggerRequester();
         $request
             ->withMethod('GET')

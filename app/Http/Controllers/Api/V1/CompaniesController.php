@@ -273,7 +273,7 @@ class CompaniesController extends Controller
      */
     public function edit($id)
     {
-        //
+        //aaaa
     }
 
     /**
